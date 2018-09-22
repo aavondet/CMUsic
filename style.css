@@ -1,8 +1,15 @@
+html {
+    height:100%;
+    width: 100%;
+}
 body {
     background-color: #4bc6b9;
+    height: 100%;
+    width: 100%;
 }
 #container {
-      grid-template-columns: 6% 26% 5% 26% 5% 26% 6%;
+    position: relative;
+    width: 100%;
 }
 
 #title{
@@ -10,6 +17,9 @@ body {
     color: #ffffff;
 }
 
+#Artists{
+    width:100%;
+}
 #artists-title{
     text-align: center;
     width: 33%;
@@ -17,25 +27,23 @@ body {
 
 #genres-title{
     text-align: center;
-    width: 33%;
 }
 
 #songs-title{
     text-align: center;
-    width: 33%;
+
 }
 
 #input-artists{
-    display: absolute;
-    
+    width: 27px;
+    white-space: nowrap;
 }
 
 #input-genres{
-    grid-column: 4;
+
 }
 
 #input-genres{
-    grid-column: 6;
 }
 input {
     border-bottom-color: #3849A0;
@@ -47,7 +55,12 @@ input {
     color: aqua;
     outline: none;
     font-size: 20px;
+    display: block;
 }
+input:hover{
+    border-bottom-color: white;
+}
+
 
 h2{
     text-align: center;
