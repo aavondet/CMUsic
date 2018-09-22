@@ -53,30 +53,30 @@ function store() {
     }
 
     localStorage.setItem("id", andrewId.value);
-    console.log(artists, genres, songs);
     // window.location.replace('/result');
     // return artists, genres, songs;
 
     //send info
-    var url = 'https://127.0.0.1:5000/submit';
+    var url = 'http://127.0.0.1:5000/submit';
     var data = {
         "id": andrewId.value,
         "artist_list": artists,
         "genre_list": genres,
         "song_list": songs
     }
+    console.log(JSON.stringify(data));
     
-    //JSON.stringify(data)
-    // fetch(url, {
-    //     method: 'POST', // or 'PUT'
-    //     body: "hello",
-    //     headers: {
-    //         'Content-Type': 'text/plain; charset=utf-8'
-    //     }
-    // })
-    //     .then(res => {return res.json()})
-    //     .then(response => console.log('Success:', JSON.stringify(response)))
-    //     .catch(error => console.error('Error:', error));
+     fetch(url, {
+         method: 'POST', // or 'PUT'
+         body: JSON.stringify(data),
+         mode: 'cors',
+         headers: {
+             'Content-Type': 'application/json; charset=utf-8'
+         }
+     })
+         .then(res => {return res.json()})
+         .then(response => console.log('Success:', JSON.stringify(response)))
+         .catch(error => console.error('Error:', error));
 
     // var http = new XMLHttpRequest();
     // http.open('POST', url, true);

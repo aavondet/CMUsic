@@ -21,6 +21,7 @@ def index2():
         new_user["genres"] = json["genre_list"]
         new_user["songs"] = json["song_list"]
         print(new_user)
+        users.append(new_user)
     """ Displays the index page accessible at '/'
     """
     return flask.render_template('index_input.html')
