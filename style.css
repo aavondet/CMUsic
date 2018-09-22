@@ -1,9 +1,13 @@
+body {
+    background-color: #4bc6b9;
+}
 #container {
       grid-template-columns: 6% 26% 5% 26% 5% 26% 6%;
 }
 
 #title{
     text-align: center;
+    color: #ffffff;
 }
 
 #artists-title{
@@ -22,7 +26,7 @@
 }
 
 #input-artists{
-    grid-column: 2;
+    width: 100%;
 }
 
 #input-genres{
@@ -31,4 +35,45 @@
 
 #input-genres{
     grid-column: 6;
+}
+input {
+    border-bottom-color: #3849A0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-width: 3px;
+    background: none;
+    color: aqua;
+    outline: none;
+}
+
+h2{
+    text-align: center;
+    color: #ffffff;
+}
+
+#boxes-artists{
+    width: 
+}
+
+#name{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 300px;
+    font-size: 45px;
+    text-align: center;
+    outline-color: aqua;
+}
+#submit{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 30px;
+    border: none;
+    transition-duration: 0.4s;
+    background-color: aqua;
+}
+#submit:hover {
+    background-color: azure;
 }
