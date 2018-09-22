@@ -1,5 +1,6 @@
 import flask
 from flask import request
+
 # Create the application.
 APP = flask.Flask(__name__)
 
