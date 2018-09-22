@@ -22,3 +22,19 @@ body {
 #title3{
     color: #3849A0;
 }
+#back{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 30px;
+    background: none;
+    border-color: #3849A0;
+    border-width: 3x;
+    transition-duration: 0.4s;
+    border-radius: 16px;
+    color: white;
+}
+#back:hover {
+    cursor: pointer;
+    background-color: #3849A0;
+}
