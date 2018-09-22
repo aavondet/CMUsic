@@ -112,10 +112,14 @@ h2{
     margin: 20px auto;
     width: 200px;
     height: 30px;
-    border: none;
+    background: none;
+    border-color: #3849A0;
+    border-width: 3x;
     transition-duration: 0.4s;
-    background-color: aqua;
+    border-radius: 16px;
+    color: white;
 }
 #submit:hover {
-    background-color: azure;
+    cursor: pointer;
+    background-color: #3849A0;
 }

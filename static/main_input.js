@@ -56,9 +56,28 @@ function store(){
     console.log(artists, genres, songs);
     window.location.replace('/result');
     return artists, genres, songs;
-}
-submit.addEventListener('click', store);
-window.addEventListener('keypress', function(e){
+    
+    //send info
+    var url = 'https://127.0.0.1:5000/';
+    var data = {id: andrewId.value,
+               artist_list: artists,
+               genre_list: genres,
+               song_list: songs};
+
+    fetch(url, {
+    method: 'POST', // or 'PUT'
+    body: JSON.stringify(data), // data can be `string` or {object}!
+    headers:{
+    'Content-Type': 'application/json'
+    }
+    }).then(res => return res.json())
+        .then(response => console.log('Success:', JSON.stringify(response)))
+        .catch(error => console.error('Error:', error));
+    }
+
+    //event listeners
+    submit.addEventListener('click', store);
+    window.addEventListener('keypress', function(e){
     var key = e.which || e.keyCode;
     if (key === 13) { 
     var artists = [];
@@ -96,3 +115,4 @@ window.addEventListener('keypress', function(e){
     window.location.replace('/result');
     return artists, genres, songs;
     }});
+
