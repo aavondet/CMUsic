@@ -15,6 +15,8 @@ var songs_2 = document.getElementById('input-songs-2');
 var songs_3 = document.getElementById('input-songs-3');
 var songs_4 = document.getElementById('input-songs-4');
 var songs_5 = document.getElementById('input-songs-5');
+//id
+var andrewId = document.getElementById('andrewId');
 //Submit button
 var submit = document.getElementById('submit');
 
@@ -50,7 +52,45 @@ function store(){
         songs[k]=songs[k].toLowerCase();
     }
     
+    localStorage.setItem("id", andrewId.value);
     console.log(artists, genres, songs);
     return artists, genres, songs;
 }
 submit.addEventListener('click', store);
+window.addEventListener('keypress', function(e){
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+    var artists = [];
+    var genres = [];
+    var songs = [];
+    
+    artists.push(artist_1.value);
+    artists.push(artist_2.value);
+    artists.push(artist_3.value);
+    artists.push(artist_4.value);
+    artists.push(artist_5.value);
+    
+    genres.push(genres_1.value);
+    genres.push(genres_2.value);
+    genres.push(genres_3.value);
+    
+    songs.push(songs_1.value);
+    songs.push(songs_2.value);
+    songs.push(songs_3.value);
+    songs.push(songs_4.value);
+    songs.push(songs_5.value);
+    
+    for (var i=0;i<artists.length;i++){
+        artists[i]=artists[i].toLowerCase();
+    }
+    for (var j=0;j<genres.length;j++){
+        genres[j]=genres[j].toLowerCase();
+    }
+    for (var k=0;k<songs.length;k++){
+        songs[k]=songs[k].toLowerCase();
+    }
+    
+    localStorage.setItem("id", andrewId.value);
+    console.log(artists, genres, songs);
+    return artists, genres, songs;
+    }});
