@@ -26,7 +26,8 @@ body {
 }
 
 #input-artists{
-    width: 100%;
+    display: absolute;
+    
 }
 
 #input-genres{
@@ -45,6 +46,7 @@ input {
     background: none;
     color: aqua;
     outline: none;
+    font-size: 20px;
 }
 
 h2{
