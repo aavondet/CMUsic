@@ -1,0 +1,121 @@
+html {
+    height:100%;
+    width: 100%;
+}
+body {
+    background-color: #4bc6b9;
+    height: 100%;
+    width: 100%;
+}
+#container {
+    position: relative;
+    width: 100%;
+}
+
+#title{
+    text-align: center;
+    color: #ffffff;
+}
+
+#Artists{
+    width:100%;
+}
+#artists-title{
+    text-align: center;
+    width: 33%;
+}
+
+#genres-title{
+    text-align: center;
+}
+
+#songs-title{
+    text-align: center;
+
+}
+
+.input-songs{
+    width: 50%;
+    align-content: center;
+    width: 1000px;
+    margin: auto;
+    width: 50%;
+}
+.input-songs input{
+    align-content: center;
+    margin: auto;
+    width: 50%;
+}
+
+.input-genres{
+    width: 50%;
+    align-content: center;
+    width: 600px;
+    margin: auto;
+    width: 50%;
+}
+.input-genres input{
+    align-content: center;
+    margin: auto;
+    width: 50%;
+}
+.input-artists{
+    width: 50%;
+    align-content: center;
+    width: 1000px;
+    margin: auto;
+    width: 50%;
+}
+.input-artists input{
+    align-content: center;
+    margin: auto;
+    width: 50%;
+}
+input {
+    border-bottom-color: #3849A0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline-width: 3px;
+    background: none;
+    color: aqua;
+    outline: none;
+    font-size: 20px;
+    display: block;
+    width: 200px;
+}
+input:hover{
+    border-bottom-color: white;
+}
+
+
+h2{
+    text-align: center;
+    color: #ffffff;
+}
+
+#boxes-artists{
+    width: 
+}
+
+#andrewId{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 300px;
+    font-size: 45px;
+    text-align: center;
+    outline-color: aqua;
+}
+#submit{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 30px;
+    border: none;
+    transition-duration: 0.4s;
+    background-color: aqua;
+}
+#submit:hover {
+    background-color: azure;
+}
