@@ -1,6 +1,5 @@
 import flask
 from flask import request
-
 # Create the application.
 APP = flask.Flask(__name__)
 
@@ -24,6 +23,12 @@ def index2():
         users.append(new_user)
     """ Displays the index page accessible at '/'
     """
+    newUser={}
+    newUser[id] = request.form['id']
+
+
+    artistList=request.form['artist_list']
+    lst[] += 
     return flask.render_template('index_input.html')
 
 @APP.route('/input')
