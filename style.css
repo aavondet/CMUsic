@@ -1,0 +1,34 @@
+#container {
+      grid-template-columns: 6% 26% 5% 26% 5% 26% 6%;
+}
+
+#title{
+    text-align: center;
+}
+
+#artists-title{
+    text-align: center;
+    width: 33%;
+}
+
+#genres-title{
+    text-align: center;
+    width: 33%;
+}
+
+#songs-title{
+    text-align: center;
+    width: 33%;
+}
+
+#input-artists{
+    grid-column: 2;
+}
+
+#input-genres{
+    grid-column: 4;
+}
+
+#input-genres{
+    grid-column: 6;
+}
