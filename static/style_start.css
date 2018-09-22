@@ -41,6 +41,7 @@ button:hover{
     background-color: #3849A0;
 }
 
-.title{
+img {
+    padding: 5px;
     padding-top: 10%;
 }
