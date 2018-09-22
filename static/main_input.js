@@ -78,18 +78,7 @@ function store() {
          .then(response => console.log('Success:', JSON.stringify(response)))
          .catch(error => console.error('Error:', error));
 
-    // var http = new XMLHttpRequest();
-    // http.open('POST', url, true);
-
-    // //Send the proper header information along with the request
-    // http.setRequestHeader('Content-type', 'application/json');
-
-    // http.onreadystatechange = function () {//Call a function when the state changes.
-    //     if (http.readyState == 4 && http.status == 200) {
-    //         alert(http.responseText);
-    //     }
-    // }
-    // http.send(data);
+    window.window.location.replace('http://127.0.0.1:5000/result')
 }
 //event listeners
 // submit.addEventListener('click', () => store);
