@@ -54,7 +54,7 @@ function store(){
     
     localStorage.setItem("id", andrewId.value);
     console.log(artists, genres, songs);
-    window.location.replace('./Result/index.html');
+    window.location.replace('/result');
     return artists, genres, songs;
 }
 submit.addEventListener('click', store);
@@ -93,6 +93,6 @@ window.addEventListener('keypress', function(e){
     
     localStorage.setItem("id", andrewId.value);
     console.log(artists, genres, songs);
-    window.location.replace('./Result/index.html');
+    window.location.replace('/result');
     return artists, genres, songs;
     }});
