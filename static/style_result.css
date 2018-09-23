@@ -7,3 +7,18 @@ body {
     height: 100%;
     width: 100%;
 }
+.container{
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    width: 100%;
+}
+#title1{
+    color: #3849A0;
+}
+#title2{
+    color: #3849A0;
+}
+#title3{
+    color: #3849A0;
+}

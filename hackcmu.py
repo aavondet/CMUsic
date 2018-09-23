@@ -8,9 +8,19 @@ def index():
     """ Displays the index page accessible at '/'
     """
     return flask.render_template('index_start.html')
-lst = []   
-@APP.route('/login',methods=['POST'])
+
+users = []
+@APP.route('/submit', methods=['POST'])
 def index2():
+    if request.method == 'POST':
+        new_user={}
+        json = request.get_json()
+        new_user["andrewId"] = json["id"]
+        new_user["artists"] = json["artist_list"]
+        new_user["genres"] = json["genre_list"]
+        new_user["songs"] = json["song_list"]
+        print(new_user)
+        users.append(new_user)
     """ Displays the index page accessible at '/'
     """
     newUser={}
@@ -19,6 +29,10 @@ def index2():
 
     artistList=request.form['artist_list']
     lst[] += 
+    return flask.render_template('index_input.html')
+
+@APP.route('/input')
+def index4():
     return flask.render_template('index_input.html')
 
 @APP.route('/result')
