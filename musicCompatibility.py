@@ -33,7 +33,7 @@ def getScore(l1,l2):
 
     listIndex1=getIndices(l1,l2)[0]
     listIndex2=getIndices(l1,l2)[1]
-    #print("listIndex1 and listIndex2 are:", listIndex1, listIndex2)
+    
     sum=0
     for i in range(len(listIndex1)):
         sum=w1[i]+w2[i]
@@ -43,11 +43,15 @@ def getScore(l1,l2):
     return sum/2
 
 
-        
+
 lst1 = ["hlian",["kesha","bieber","xxx","coldplay","kendrick"],["rap","pop","classical"],["mr. brightside","wreckingball","castle on the hill","eric","fuck this"]]
 lst2= ["sjobalia",["ed sheeran","imagine dragons","coldplay","xxx","kesha"],["pop","metal","classical"],["ball","horse","dog","doge","idk"]]
 lst3= ["arnaud",["kesha","bieber","kanye","lil pump","mozart"],["metal","pop","classical"],["mr brightside","wreckingball","dog","idk","doge"]]
 
+masterList=[lst1]+[lst2]+[lst3]
+
+
+"""
 dictA={}
 for i,l in enumerate([]):
     a[i]=l[0] #add the lists
@@ -69,28 +73,69 @@ g3=l3[1]
 
 s1=l1[2]
 s2=l2[2]
-s3=l3[2]
-
-similarityScore=0
-
-similarityScore=.7*getScore(s1,s2)+.2*getScore(a1,a2)+.1*getScore(g1,g2)
-
-def totalScore():
-    return lst1[0],lst2[0],similarityScore   
+s3=l3[2]"""
 
 
-listUser=[l1[0],l2[0]]
-listScores=copy.copy(listUser)
+
+
+
+def totalScore(list1,list2): #works
+    similarityScore=0
+    
+
+    a1=list1[0]
+    a2=list2[0]
+
+    g1=list1[1] 
+    g2=list2[1]
+    
+    s1=list1[2]
+    s2=list2[2]
+    
+    similarityScore=.7*getScore(s1,s2)+.2*getScore(a1,a2)+.1*getScore(g1,g2)
+    return similarityScore   
+
+
+
+
+
 #sort list, take out first n elements
-
-def allMatches(user,listUser):
+def listUser(masterList): #input is always master list
+    l1=masterList
     result=[]
-    for i in range(len(listUser)):
-        result+=[totalScore()]
+    for i in range(len(l1)):
+        result+=[l1[i][0]]
+    return result
+print(listUser(masterList)[0])
+
+
+
+def getUserScore(user1,user2): #works
+    try:
+        for i in range(len(masterList)):
+            if user1 in masterList[i]:
+                l1=masterList[i]
+        for j in range(len(masterList)):
+            if user2 in masterList[j]:
+                l2=masterList[j]
+        return totalScore(l1,l2)
+    except:
+        return 1
+print(getUserScore("hlian","sjobalia"))
+print(getUserScore("hlian","hlian"))
+print(getUserScore("hlian","arnaud"))
+
+print(listUser(masterList)[0])
+
+def allMatches(user):
+    result=[]
+    for i in range(len(listUser(masterList))):
+        result+=[getUserScore(user,listUser(masterList)[i])]
+        
     result.sort(reverse=True)
     return user,result
 
-print(allMatches("hlian",listUser))
+print(allMatches("hlian"))
         
         
 
