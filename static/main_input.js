@@ -78,7 +78,7 @@ function store() {
          .then(response => console.log('Success:', JSON.stringify(response)))
          .catch(error => console.error('Error:', error));
 
-    window.window.location.replace('http://127.0.0.1:5000/result')
+    //window.window.location.replace('http://127.0.0.1:5000/result')
 }
 //event listeners
 // submit.addEventListener('click', () => store);
